@@ -1,0 +1,26 @@
+{% import "_includes/forms" as forms %}
+
+{{ forms.autosuggestField({
+    label: "API Key",
+    id: 'apiKey',
+    name: 'apiKey',
+    instructions: "API key from your Fastly account.",
+    suggestEnvVars: true,
+    suggestions: craft.cp.getEnvSuggestions(),
+    value: purger.apiKey,
+    errors: purger.getErrors('apiKey'),
+    required: true,
+    first: true,
+}) }}
+
+{{ forms.autosuggestField({
+    label: "Service ID",
+    id: 'serviceId',
+    name: 'serviceId',
+    instructions: "Service ID from your Fastly account.",
+    suggestEnvVars: true,
+    suggestions: craft.cp.getEnvSuggestions(),
+    value: purger.serviceId,
+    errors: purger.getErrors('serviceId'),
+    required: true,
+}) }}

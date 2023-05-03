@@ -1,0 +1,33 @@
+{
+  "name": "mango-chutney/craft-blitz-fastly",
+  "description": "Fastly cache purger for the Blitz plugin for Craft CMS.",
+  "type": "blitz-purger",
+  "license": "mit",
+  "require": {
+    "php": ">=8.0.2",
+    "craftcms/cms": "^4.0",
+    "fastly/fastly": "^1.3",
+    "putyourlightson/craft-blitz": "^4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "mangochutney\\blitzfastly\\": "src/"
+    }
+  },
+  "extra": {
+    "handle": "blitz-fastly",
+    "name": "Blitz Fastly Purger",
+    "developer": "Mango Chutney",
+    "class": "mangochutney\\blitzfastly\\FastlyPurger"
+  },
+  "config": {
+    "sort-packages": true,
+    "platform": {
+      "php": "8.0.2"
+    },
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true,
+      "craftcms/plugin-installer": true
+    }
+  }
+}
