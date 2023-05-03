@@ -29,5 +29,11 @@
       "yiisoft/yii2-composer": true,
       "craftcms/plugin-installer": true
     }
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.16"
+  },
+  "scripts": {
+    "lint": "./vendor/bin/php-cs-fixer fix src --rules=@PSR12,array_indentation,method_chaining_indentation,multiline_whitespace_before_semicolons,method_argument_space,whitespace_after_comma_in_array"
   }
 }
