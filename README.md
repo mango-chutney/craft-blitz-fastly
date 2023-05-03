@@ -8,11 +8,11 @@ Fastly cache purger for the Blitz plugin for Craft CMS.
 
 ```php
 'cachePurgerTypes' => [
-  'mangochutney\blitzfastly\FastlyPurger',
+    'mangochutney\blitzfastly\FastlyPurger',
 ],
 ```
 
-2. Select the purger under the `Reverse Proxy Purging` tab in your Blitz settings and configure with your API key and service ID.
+2. Select the purger under the `Reverse Proxy Purging` tab in your Blitz settings and configure with your API key and service ID
 
 Or configure in your Blitz config file
 
@@ -20,7 +20,7 @@ Or configure in your Blitz config file
 'cachePurgerType' => 'mangochutney\blitzfastly\FastlyPurger',
 
 'cachePurgerSettings' => [
-  'apiKey' => '123456789',
-  'serviceId' => '123456789',
+    'apiKey' => 'FASTLY_API_TOKEN',
+    'serviceId' => 'FASTLY_SERVICE_ID',
 ],
 ```
