@@ -4,13 +4,7 @@ Fastly cache purger for the Blitz plugin for Craft CMS.
 
 ## Usage
 
-1. Install the plugin with `composer require mango-chutney/craft-blitz-fastly` and add the class to `cachePurgerTypes` in your `config/blitz.php` file
-
-```php
-'cachePurgerTypes' => [
-    'mangochutney\blitzfastly\FastlyPurger',
-],
-```
+1. Install the plugin with `composer require mango-chutney/craft-blitz-fastly` or from the plugin store
 
 2. Select the purger under the `Reverse Proxy Purging` tab in your Blitz settings and configure with your Fastly API key and service ID
 

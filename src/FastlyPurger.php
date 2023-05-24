@@ -7,8 +7,8 @@ use craft\behaviors\EnvAttributeParserBehavior;
 use craft\events\RegisterTemplateRootsEvent;
 use craft\helpers\App;
 use craft\web\View;
-use Fastly\Configuration;
 use Fastly\Api\PurgeApi;
+use Fastly\Configuration;
 use GuzzleHttp;
 use putyourlightson\blitz\Blitz;
 use putyourlightson\blitz\drivers\purgers\BaseCachePurger;
@@ -90,7 +90,7 @@ class FastlyPurger extends BaseCachePurger
 
             try {
                 $this->_apiClient()->purgeSingleUrl($options);
-            } catch(\Exception $e) {
+            } catch (\Exception $e) {
                 Blitz::$plugin->log($e->getMessage());
             }
         }
@@ -116,7 +116,7 @@ class FastlyPurger extends BaseCachePurger
 
         try {
             $this->_apiClient()->purgeAll($options);
-        } catch(\Exception $e) {
+        } catch (\Exception $e) {
             Blitz::$plugin->log($e->getMessage());
         }
 
